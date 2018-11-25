@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.beatme</groupId>
+    <artifactId>BmBoot</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>BmBoot</name>
+
+    <properties>
+        <bmEcd.version>1.0-SNAPSHOT</bmEcd.version>
+
+        <bmmodels.version>1.0-SNAPSHOT</bmmodels.version>
+    </properties>
+
+
+    <dependencies>
+        <!--**********External Dependencies**********-->
+        <dependency>
+            <groupId>com.beatme</groupId>
+            <artifactId>BmECD</artifactId>
+            <version>${bmEcd.version}</version>
+        </dependency>
+
+        <!--**********Internal Dependencies**********-->
+        <!--BMs Models-->
+        <dependency>
+            <groupId>com.beatme</groupId>
+            <artifactId>BmModels</artifactId>
+            <version>${bmmodels.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>internal</id>
+            <url>file://${project.build.directory}/mvn-repo</url>
+        </repository>
+    </distributionManagement>
+
+</project>
